@@ -55,13 +55,13 @@ function App() {
     let newTotal = +total  + plan.price
     setTotal(newTotal.toFixed(2))
   }
-  function handleRemoveCart(index) {
+  let handleRemoveCart = ((index,e)=> {
     let newTotal = total - currentitem[index].price
     setTotal(newTotal.toFixed(2))
     currentitem.splice(index, 1)
     setCurrentitem([...currentitem])
 
-  }
+  })
   return (
     <>
       <div className="container">

@@ -16,7 +16,11 @@ function Cart(props) {
           </p>
         </div>
         <div className="card-footer">
-        <button className="btn btn-block btn-primary text-uppercase" onClick={() => props.handleSelectedPlan(props.data)}>ADD TO CART</button>
+        <button className="btn btn-block btn-primary text-uppercase" onClick={
+          (e) => {
+          props.handleSelectedPlan(props.data)
+          e.target.disabled=true}
+          }>ADD TO CART</button>
         </div>
         </div>
       </div>
